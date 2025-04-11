@@ -1,5 +1,5 @@
 import { IconButton } from "@mui/material";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
 
 type Upload3x4Props = {
@@ -9,20 +9,29 @@ type Upload3x4Props = {
 
 function Upload3x4({ onChange, error }: Upload3x4Props) {
   const [preview, setPreview] = useState<string | null>(null);
+  const [messageError, setMessageError] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (error) {
+      setMessageError([error]);
+    }
+  }, [error]);
+
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
     if (!file) return;
-
+    
     const img = new Image();
     const url = URL.createObjectURL(file);
-
+    
     img.onload = () => {
       const ratio = img.width / img.height;
       if (Math.abs(ratio - 0.75) < 0.05) {
         setPreview(url);
         onChange(file);
       } else {
+        setMessageError(["A imagem precisa ter o formato 3x4"])
         onChange(null);
         setPreview(null);
       }
@@ -55,14 +64,14 @@ function Upload3x4({ onChange, error }: Upload3x4Props) {
             style={{ aspectRatio: "3 / 4", objectFit: "cover", borderRadius: 4 }}
           />
           <div style={{ marginTop: 10 }}>
-            <IconButton onClick={() => removeImage()} size="small" sx={{color: "rgb(25, 118, 210)"}}>
+            <IconButton onClick={() => removeImage()} size="small" sx={{ color: "rgb(25, 118, 210)" }}>
               <i className="fas fa-xmark"></i>
             </IconButton>
           </div>
         </>
       )}
       {!preview && <p>{isDragActive ? "Solte a imagem aqui..." : "Arraste ou clique para selecionar uma foto 3x4"}</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {messageError && <p style={{ color: "red" }}>{messageError}</p>}
     </div>
   );
 }

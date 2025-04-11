@@ -62,7 +62,8 @@ export const orgaosExpedidores = [
     {label: "2 Parcelas de R$ 270,00", value: 2},
     {label: "4 Parcelas de R$ 135,00", value: 3},
     {label: "8 Parcelas de R$67,50", value: 4},
-    {label: "12 Parcelas de R$ 45,00 ", value: 5},
+    {label: "12 Parcelas de R$ 45,00", value: 5},
+    {label: "Filiados da cooperativa", value: 6},
   ];
 
   export const apartamentos = [
