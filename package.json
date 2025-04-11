@@ -13,6 +13,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@fortawesome/fontawesome-free": "^6.5.2",
+    "@mui/icons-material": "^7.0.2",
     "@mui/material": "^6.4.5",
     "cleave": "^1.0.2",
     "cleave.js": "^1.6.0",
@@ -26,7 +27,9 @@
     "react-input-mask": "^2.0.4",
     "react-input-mask-next": "^3.0.0-alpha.12",
     "react-router-dom": "^7.2.0",
-    "react-text-mask": "^5.5.0"
+    "react-slick": "^0.30.3",
+    "react-text-mask": "^5.5.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
