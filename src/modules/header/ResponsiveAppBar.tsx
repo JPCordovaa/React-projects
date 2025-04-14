@@ -11,14 +11,13 @@ const ResponsiveAppBar = () => {
 
     const pages = React.useMemo(
 		() => [
-			{ title: "Sobre",
-                subpages: [
-					{ title: "Dados do Usuário", url: "/usuarios/DadosUsuario" },
-					{ title: "Consultar Usuários", url: "/usuarios/cadastro"},
-					{ title: "Incluir Plantonista", url: "/usuarios/incluirUsuarioTema"},
+			{ title: "Sobre", url: "/"},
+			{ title: "Documentos",
+				subpages: [
+					{ title: "Estatuto", url: "/usuarios/DadosUsuario" },
+					{ title: "badalados", url: "/usuarios/cadastro"},
 				],
-             },
-			{ title: "Benefícios", url: "/consultas" },
+			 },
 			{ title: "Faça parte", url: "/suporte" },
 			{ title: "Contato", url: "/estatisticas" },
         ],[])
@@ -134,7 +133,6 @@ const ResponsiveAppBar = () => {
 											sx={{
 												position: "absolute",
 												top: "100%",
-												left: 0,
 												backgroundColor: "white",
 												zIndex: 1,
 												boxShadow: 1,
