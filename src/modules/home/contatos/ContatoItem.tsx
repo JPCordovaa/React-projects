@@ -13,13 +13,13 @@ const ContatoItem = ({ icone, label, valor, link }: ContatoItemProps) => {
       }}
     >
       <Box sx={{ fontSize: 40, color: "#C5A059", mb: 1 }}>{icone}</Box>
-      <Typography sx={{ fontWeight: 600 }}>{label}</Typography>
+      <Typography sx={{ fontWeight: 600, color: "#D4D3D2" }}>{label}</Typography>
       {link ? (
-        <Typography component="a" href={link} target="_blank" rel="noopener noreferrer" sx={{ color: "#666", textDecoration: "none" }}>
+        <Typography component="a" href={link} target="_blank" rel="noopener noreferrer" sx={{ color: "#C5A059", textDecoration: "none" }}>
           {valor}
         </Typography>
       ) : (
-        <Typography sx={{ color: "#666" }}>{valor}</Typography>
+        <Typography sx={{ color: "#C5A059" }}>{valor}</Typography>
       )}
     </Box>
   );

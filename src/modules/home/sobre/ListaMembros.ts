@@ -1,4 +1,4 @@
-import fotoExemplo from "../../assets/associacaoMarina.png";
+import fotoExemplo from "../../../assets/associacaoMarina.png";
 
 export const membros = [
     {

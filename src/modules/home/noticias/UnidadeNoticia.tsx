@@ -7,7 +7,7 @@ const UnidadeNoticia = ({ data, instituicao, titulo, url }: UnidadeNoticiaProps)
             <Grid2 container alignItems={"center"}>
                 <i className="fas fa-arrow-right-long" style={{ fontSize: 24, color: "lightgray", marginRight: 20 }}></i>
                 <Grid2 container>
-                    <Typography variant="body2" sx={{ color: "#007a33", fontWeight: "bold" }}>
+                    <Typography variant="body2" sx={{ color: "#D4D3D2", fontWeight: "bold" }}>
                         {data}
                     </Typography>
                     <Typography variant="body2" sx={{ color: "#C5A059", fontWeight: "bold", textTransform: "uppercase" }}>

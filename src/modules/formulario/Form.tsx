@@ -1,5 +1,5 @@
 import { Box, Button, Grid2, MenuItem, TextField, Typography } from "@mui/material";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Controller, useFieldArray, useForm } from "react-hook-form";
 import MaskedInput from "react-text-mask";
 import MontagemPdf from "../../components/MontagemPdf";
@@ -9,6 +9,7 @@ import { apartamentos, blocos, cotas, estadoCivil, orgaosExpedidores, parcelas }
 export default function Form() {
     const [mostrarSegundoTitular, setMostrarSegundoTitular] = useState<boolean>(false);
     const [mostrarSegundoTelefone, setmostrarSegundoTelefone] = useState<boolean>(false);
+    const topRef = useRef<HTMLDivElement>(null);
     const { handleSubmit, control } = useForm({
         mode: "onSubmit",
         defaultValues: {
@@ -33,7 +34,7 @@ export default function Form() {
             pagamento: null,
         },
     });
-    
+
     const phoneMask = ["(", /[1-9]/, /\d/, ")", " ", /\d/, /\d/, /\d/, /\d/, /\d/, "-", /\d/, /\d/, /\d/, /\d/];
     const cpfMask = [/\d/, /\d/, /\d/, ".", /\d/, /\d/, /\d/, ".", /\d/, /\d/, /\d/, "-", /\d/, /\d/];
     const dateMask = [/\d/, /\d/, "/", /\d/, /\d/, "/", /\d/, /\d/, /\d/, /\d/];
@@ -50,12 +51,14 @@ export default function Form() {
 
     const onError = (errors) => {
         console.log("Erros no formulário:", errors);
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        topRef.current?.scrollIntoView({ behavior: "smooth" });
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit, onError)} style={{ marginTop: 20 }}>
+        <form onSubmit={handleSubmit(onSubmit, onError)} style={{ margin: 50 }}>
+            <div ref={topRef} />
             <Grid2 container gap={2} direction={'column'}>
+                <Typography align="center" variant="h5">Preencha o Formulário e torne-se um associado!</Typography>
                 <Controller
                     name="email"
                     control={control}

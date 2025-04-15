@@ -30,6 +30,7 @@ function Upload3x4({ onChange, error }: Upload3x4Props) {
       if (Math.abs(ratio - 0.75) < 0.05) {
         setPreview(url);
         onChange(file);
+        setMessageError([])
       } else {
         setMessageError(["A imagem precisa ter o formato 3x4"])
         onChange(null);

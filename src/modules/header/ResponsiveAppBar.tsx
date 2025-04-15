@@ -85,7 +85,7 @@ const ResponsiveAppBar = () => {
 													onClick={() => handleMenuClick(subpage.url)}
 													sx={{
 														display: "block",
-														color: location.pathname === subpage.url ? "black" : "#4a71db",
+														color: "white",
 														fontFamily: "inherit",
 														fontWeight: "bold",
 														fontSize: "14.5px",
@@ -117,11 +117,11 @@ const ResponsiveAppBar = () => {
 									<Button
 										onClick={() => handleMenuClick(page.url)}
 										sx={{
-											color: location.pathname === page.url ? "black" : hoveredPage === page.title ? "black" : "#4a71db",
+											color: hoveredPage === page.title ? "#4a71db" : "white",
 											display: "block",
 											fontFamily: "inherit",
 											fontWeight: "bold",
-											fontSize: "14.5px",
+											fontSize: "18px",
 											lineHeight: "1.80",
 											letterSpacing: "0.03em",
 										}}
@@ -133,8 +133,8 @@ const ResponsiveAppBar = () => {
 											sx={{
 												position: "absolute",
 												top: "100%",
+												borderRadius: 2,
 												left: 0,
-												backgroundColor: "white",
 												zIndex: 1,
 												boxShadow: 1,
 												width: "max-content",
@@ -148,18 +148,18 @@ const ResponsiveAppBar = () => {
 													}}
 													sx={{
 														display: "block",
-														color: "#4a71db",
+														color: "white",
 														fontFamily: "inherit",
 														fontWeight: "bold",
 														fontSize: "14.5px",
 														lineHeight: "1.80",
 														letterSpacing: "0.03em",
 														padding: "8px 16px",
-														backgroundColor: "#E2E8F8",
+														backgroundColor: "#4a71db",
 														width: "100%",
 														pointerEvents: "auto",
 														"&:hover": {
-															color: "black",
+															color: "#01416e",
 															cursor: "pointer",
 														},
 													}}

@@ -4,8 +4,8 @@ import { membros } from "./ListaMembros";
 
 const Diretoria = () => {
   return (
-    <Box sx={{ padding: 4 }}>
-      <Typography variant="h5" sx={{ fontWeight: 600, marginBottom: 3 }}>
+    <Box sx={{ padding: 4, marginTop: 5 }}>
+      <Typography variant="h4" sx={{ fontWeight: 600, marginBottom: 3, color: "#D4D3D2" }}>
         Diretoria
       </Typography>
       <Grid2 container spacing={4} justifyContent="space-around">

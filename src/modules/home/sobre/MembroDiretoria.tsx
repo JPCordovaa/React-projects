@@ -21,8 +21,8 @@ const MembroDiretoria = ({ nome, titulo, foto }: MembroDiretoriaProps) => {
           border: "3px solid #C5A059",
         }}
       />
-      <Typography sx={{ fontWeight: 600, marginTop: 1 }}>{titulo}</Typography>
-      <Typography sx={{ color: "#666" }}>{nome}</Typography>
+      <Typography sx={{ fontWeight: 600, marginTop: 1, color: "#D4D3D2" }}>{titulo}</Typography>
+      <Typography sx={{ color: "#C5A059" }}>{nome}</Typography>
     </Box>
   );
 };
