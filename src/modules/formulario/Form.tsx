@@ -6,11 +6,6 @@ import MontagemPdf from "../../components/MontagemPdf";
 import Upload3x4 from "../../components/Upload3x4";
 import { apartamentos, blocos, cotas, estadoCivil, orgaosExpedidores, parcelas } from "./commons";
 
-const phoneMask = ["(", /[1-9]/, /\d/, ")", " ", /\d/, /\d/, /\d/, /\d/, /\d/, "-", /\d/, /\d/, /\d/, /\d/];
-const cpfMask = [/\d/, /\d/, /\d/, ".", /\d/, /\d/, /\d/, ".", /\d/, /\d/, /\d/, "-", /\d/, /\d/];
-const dateMask = [/\d/, /\d/, "/", /\d/, /\d/, "/", /\d/, /\d/, /\d/, /\d/];
-const cepMask = [/\d/, /\d/, /\d/, /\d/, /\d/, "-", /\d/, /\d/, /\d/];
-
 export default function Form() {
     const [mostrarSegundoTitular, setMostrarSegundoTitular] = useState<boolean>(false);
     const [mostrarSegundoTelefone, setmostrarSegundoTelefone] = useState<boolean>(false);
@@ -38,6 +33,11 @@ export default function Form() {
             pagamento: null,
         },
     });
+    
+    const phoneMask = ["(", /[1-9]/, /\d/, ")", " ", /\d/, /\d/, /\d/, /\d/, /\d/, "-", /\d/, /\d/, /\d/, /\d/];
+    const cpfMask = [/\d/, /\d/, /\d/, ".", /\d/, /\d/, /\d/, ".", /\d/, /\d/, /\d/, "-", /\d/, /\d/];
+    const dateMask = [/\d/, /\d/, "/", /\d/, /\d/, "/", /\d/, /\d/, /\d/, /\d/];
+    const cepMask = [/\d/, /\d/, /\d/, /\d/, /\d/, "-", /\d/, /\d/, /\d/];
 
     const { fields, append, remove } = useFieldArray({
         control,

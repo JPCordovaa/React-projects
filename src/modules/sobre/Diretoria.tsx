@@ -1,6 +1,6 @@
 import { Box, Grid2, Typography } from "@mui/material";
 import MembroDiretoria from "./MembroDiretoria";
-import { membros } from "./commons";
+import { membros } from "./ListaMembros";
 
 const Diretoria = () => {
   return (

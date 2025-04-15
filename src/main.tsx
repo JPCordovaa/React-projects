@@ -8,6 +8,9 @@ import Header from './modules/header/Header'
 import BannerCarousel from './modules/banner/Banner';
 import { BrowserRouter } from 'react-router-dom';
 import CardNoticias from './modules/noticias/CardNoticias';
+import Diretoria from './modules/sobre/Diretoria';
+import Sobre from './modules/sobre/Sobre';
+import Contatos from './modules/contatos/Contatos';
 
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
@@ -17,5 +20,8 @@ createRoot(document.getElementById('root')!).render(
     <BannerCarousel/>
     <Form />
     <CardNoticias/>
+    <Sobre/>
+    <Diretoria/>
+    <Contatos/>
   </BrowserRouter>
 )

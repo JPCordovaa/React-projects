@@ -15,7 +15,7 @@ const ResponsiveAppBar = () => {
 			{ title: "Documentos",
 				subpages: [
 					{ title: "Estatuto", url: "/usuarios/DadosUsuario" },
-					{ title: "badalados", url: "/usuarios/cadastro"},
+					{ title: "Consultar Usuários", url: "/usuarios/cadastro"},
 				],
 			 },
 			{ title: "Faça parte", url: "/suporte" },
@@ -133,6 +133,7 @@ const ResponsiveAppBar = () => {
 											sx={{
 												position: "absolute",
 												top: "100%",
+												left: 0,
 												backgroundColor: "white",
 												zIndex: 1,
 												boxShadow: 1,

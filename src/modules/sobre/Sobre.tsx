@@ -6,10 +6,18 @@ const Sobre = () => {
             <Grid2>
                 <Typography>Sobre a Associação</Typography>
                 <Typography>texto com descrição de quão maravilhosa é essa associação e como ela pode mudar a vida de todos os seus contribuintes e associados</Typography>
-                <Button>Estatuto</Button>
-                <Button>Seja um Associado!</Button>
-            </Grid2>
-        </Box>
+                <Button
+                    variant="outlined"
+                    component="a"
+                    href="/estatuto.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Estatuto
+                </Button>
+            <Button>Seja um Associado!</Button>
+        </Grid2>
+        </Box >
     )
 }
 
